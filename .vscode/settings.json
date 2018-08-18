@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3e381d30-7c8e-4d9b-97e2-016d6317f55b/resourceGroups/cs496-final-project-seafielp/providers/Microsoft.Web/sites/cs496-final-project-seafielp",
+    "appService.deploySubpath": ""
+}

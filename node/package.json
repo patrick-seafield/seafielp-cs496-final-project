@@ -1,0 +1,43 @@
+{
+  "name": "contactlist",
+  "description": "",
+  "version": "0.1.0",
+  "author": "John Doe <johndoe@outlook.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/johndoe/contactlist.git"
+  },
+  "bugs": "http://github.com/johndoe/contactlist/issues",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": "~0.10.22"
+  },
+  "dependencies": {
+    "azure-storage": "^2.10.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsonpath": "^0.2.0",
+    "swaggerize-express": "^3.0.0",
+    "swaggerize-ui": "^1.0.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "enjoi": "~0.1.16",
+    "gulp": "^3.9.0",
+    "gulp-zip": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.6",
+    "minimist": "^1.2.0",
+    "supertest": "~0.13.0",
+    "tape": "^3.0.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js",
+    "cover": "istanbul cover tape -- test/*.js",
+    "lint": "jshint -c .jshintrc lib/**/*.js"
+  },
+  "main": "./server"
+}

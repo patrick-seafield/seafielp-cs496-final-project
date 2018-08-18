@@ -1,0 +1,378 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "v1",
+		"title": "Patrick Seafield - Final Project",
+    	"description": "seafielp CS 496 Final Project"
+	},
+	"host": "localhost",
+	"schemes": ["http", "https"],
+  	"basePath": "/",
+	"paths": {
+		"/characters": {
+			"get": {
+				"tags": ["Characters"],
+				"operationId": "characters_get",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Character"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"post": {
+				"tags": ["Characters"],
+				"operationId": "characters_post",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Character"
+						}
+					}
+				},
+				"deprecated": false
+			}			
+		},
+		"/characters/{id}": {
+			"get": {			
+				"tags": ["Characters"],
+				"operationId": "characters_getById",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Character"
+						}
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			},
+			"put": {
+				"tags": ["Characters"],
+				"operationId": "characters_put",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Character"
+						}
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			},
+			"patch": {
+				"tags": ["Characters"],
+				"operationId": "characters_patch",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Character"
+						}
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			},
+			"delete": {
+				"tags": ["Characters"],
+				"operationId": "characters_delete",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			}
+		},
+		"/characters/{id}/join": {
+			"put": {
+				"tags": ["Games"],
+				"operationId": "characters_join",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			}
+		},
+		"/characters/{id}/leave": {
+			"put": {
+				"tags": ["Characters"],
+				"operationId": "characters_leave",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			}
+		},
+
+
+		"/games": {
+			"get": {
+				"tags": ["Games"],
+				"operationId": "games_get",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Game"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"post": {
+				"tags": ["Games"],
+				"operationId": "games_post",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Game"
+						}
+					}
+				},
+				"deprecated": false
+			}			
+		},
+		"/games/{id}": {
+			"get": {			
+				"tags": ["Games"],
+				"operationId": "game_getById",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Game"
+						}
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			},
+			"put": {
+				"tags": ["Games"],
+				"operationId": "games_put",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Game"
+						}
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			},
+			"patch": {
+				"tags": ["Games"],
+				"operationId": "games_patch",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Game"
+						}
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			},
+			"delete": {
+				"tags": ["Games"],
+				"operationId": "game_delete",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			}
+		},
+		"/games/{id}/players": {
+			"get": {			
+				"tags": ["Characters", "Games"],
+				"operationId": "games_getPlayers",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Character"
+							}
+						}
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			}
+		},
+		"/games/{id}/complete": {
+			"put": {
+				"tags": ["Games"],
+				"operationId": "games_complete",
+				"consumes": [],
+				"produces": ["application/json","text/json"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "string"
+				}],
+				"deprecated": false
+			}
+		}
+	},
+
+
+	"definitions": {
+		"Character": {
+			"type": "object",
+			"properties": {
+				"RowKey": { "type": "string" },
+				"name": { "type": "string" },
+				"level": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"playerClass": { "type": "string" },
+				"experience": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"currentGame": { "type": "string" }
+			}
+		},
+		"Game": {
+			"type": "object",
+			"properties": {
+				"RowKey": { "type": "string" },
+				"title": { "type": "string" },
+				"levelMin": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"levelMax": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"experienceReward": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"completed": { "type": "boolean" }
+			}
+		}
+	}
+}
