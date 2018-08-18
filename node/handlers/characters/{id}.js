@@ -9,6 +9,7 @@ function get(req, res, next) {
     })
 }
 
+
 function update(req, res, next) {
     db.saveCharacter(req.body, function (error, result) {
         if (error) {
